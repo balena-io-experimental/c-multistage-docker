@@ -18,7 +18,7 @@ WORKDIR /usr/src/app
 COPY --from=buildstep /app/hello ./hello
 
 # Copy our start script into our deployable container context.
-COPY /app/start.sh ./start.sh
+COPY ./start.sh ./start.sh
 
 # Enable systemd init system in container
 ENV INITSYSTEM=on
