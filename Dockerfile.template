@@ -1,0 +1,24 @@
+# This is the base for our build step container
+# which has all our build essentials
+FROM resin/%%RESIN_MACHINE_NAME%%-debian:jessie AS buildstep
+RUN apt-get update && apt-get install -y build-essential gcc
+COPY hello.c /app/hello.c
+WORKDIR /app
+RUN gcc -o hello hello.c
+
+# This is our runtime container that will end up
+# running on the device.
+FROM resin/%%RESIN_MACHINE_NAME%%-debian:jessie
+
+# Defines our working directory in container
+RUN mkdir -p /usr/src/app/
+WORKDIR /usr/src/app
+
+# Copy our artifact into our deployable container context.
+COPY --from=buildstep /app/hello ./hello
+
+# Enable systemd init system in container
+ENV INITSYSTEM=on
+
+# server.js will run when container starts up on the device
+CMD ["bash", "/usr/src/app/hello"]
