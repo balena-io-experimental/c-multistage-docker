@@ -10,6 +10,11 @@ RUN gcc -o hello hello.c && chmod +x hello
 # running on the device.
 FROM resin/%%RESIN_MACHINE_NAME%%-debian:jessie
 
+# Uncomment the following if your binary requires additional dependencies
+# RUN apt-get update && apt-get install -y \
+# curl \
+# && rm -rf /var/lib/apt/lists/*
+
 # Defines our working directory in container
 RUN mkdir -p /usr/src/app/
 WORKDIR /usr/src/app
