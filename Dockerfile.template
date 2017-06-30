@@ -17,8 +17,11 @@ WORKDIR /usr/src/app
 # Copy our artifact into our deployable container context.
 COPY --from=buildstep /app/hello ./hello
 
+# Copy our start script into our deployable container context.
+COPY /app/start.sh ./start.sh
+
 # Enable systemd init system in container
 ENV INITSYSTEM=on
 
 # server.js will run when container starts up on the device
-CMD ["bash", "/usr/src/app/hello"]
+CMD ["bash", "/usr/src/app/start.sh"]
