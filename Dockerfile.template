@@ -4,7 +4,7 @@ FROM resin/%%RESIN_MACHINE_NAME%%-debian:jessie AS buildstep
 RUN apt-get update && apt-get install -y build-essential gcc
 COPY hello.c /app/hello.c
 WORKDIR /app
-RUN gcc -o hello hello.c
+RUN gcc -o hello hello.c && chmod +x hello
 
 # This is our runtime container that will end up
 # running on the device.
