@@ -7,6 +7,7 @@ COPY rpi-rgb-led-matrix /app/rpi-rgb-led-matrix
 WORKDIR /app
 
 RUN gcc -o hello hello.c && chmod +x hello
+RUN make -C rpi-rgb-led-matrix/examples-api-use/
 #RUN chmod +x rpi-rgb-led-matrix/examples-api-use/demo
 
 # This is our runtime container that will end up
