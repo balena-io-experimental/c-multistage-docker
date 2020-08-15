@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
     return usage(argv[0]);
   }
 
-  Color color(80, 9, 255);
+  Color color(255, 255, 0);
   Color bg_color(0, 0, 0);
   Color flood_color(0, 0, 0);
   Color outline_color(0,0,0);
@@ -90,7 +90,7 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "Invalid outline color spec: %s\n", optarg);
         return usage(argv[0]);
       }
-     with_outline = true;
+      with_outline = true;
       break;
     case 'F':
       if (!parseColor(&flood_color, optarg)) {

@@ -6,8 +6,8 @@
 OBJECTS=gpio.o led-matrix.o options-initialize.o framebuffer.o \
         thread.o bdf-font.o graphics.o led-matrix-c.o hardware-mapping.o \
         pixel-mapper.o multiplex-mappers.o \
-	content-streamer.o \
-        deprecated-transformer.o
+		content-streamer.o \
+        deprecated-transformer.o \
 
 TARGET=librgbmatrix
 
@@ -186,6 +186,9 @@ graphics.o: graphics.cc utf8-internal.h
 %.o : %.c compiler-flags
 	$(CC)  -I$(INCDIR) $(CFLAGS) -c -o $@ $<
 
+%.o : %.cpp compiler-flags
+	$(CC)  -I$(INCDIR) $(CFLAGS) -c -o $@ $<
+	
 clean:
 	rm -f $(OBJECTS) $(TARGET).a $(TARGET).so.1
 

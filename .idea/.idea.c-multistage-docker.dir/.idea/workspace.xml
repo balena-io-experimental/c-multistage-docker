@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="92e4a5d0-dd4d-40f1-a99a-2b043a8f5917" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile.template" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/612.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/rpi-rgb-led-matrix/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/rpi-rgb-led-matrix/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/active-3/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/active-3/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/active-3/active3-rpi-hub75-adapter-fab.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/active-3/active3-rpi-hub75-adapter.kicad_pcb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/active-3/active3-rpi-hub75-adapter.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/active-3/active3-rpi-hub75-adapter.sch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/active-3/schematic.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/kicad-scripts/kicad-fab.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/kicad-scripts/makefile.inc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/passive-3/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/passive-3/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/passive-3/passive3-rpi-hub75-adapter-fab.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/passive-3/passive3-rpi-hub75-adapter.kicad_pcb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/passive-3/passive3-rpi-hub75-adapter.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/passive-3/passive3-rpi-hub75-adapter.sch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/passive-rpi1/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/passive-rpi1/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/passive-rpi1/passive-rpi-hub75-adapter-fab.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/passive-rpi1/passive-rpi-hub75-adapter.kicad_pcb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/passive-rpi1/passive-rpi-hub75-adapter.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/adapter/passive-rpi1/passive-rpi-hub75-adapter.sch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/examples-api-use/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/rpi-rgb-led-matrix/examples-api-use/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/examples-api-use/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/rpi-rgb-led-matrix/examples-api-use/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/examples-api-use/README.md.orig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/examples-api-use/README.md.rej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/examples-api-use/input-example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/examples-api-use/text-example.cc" beforeDir="false" afterPath="$PROJECT_DIR$/rpi-rgb-led-matrix/examples-api-use/text-example.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/include/content-streamer.h" beforeDir="false" afterPath="$PROJECT_DIR$/rpi-rgb-led-matrix/include/content-streamer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/include/graphics.h" beforeDir="false" afterPath="$PROJECT_DIR$/rpi-rgb-led-matrix/include/graphics.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/include/led-matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/rpi-rgb-led-matrix/include/led-matrix.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/lib/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/rpi-rgb-led-matrix/lib/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/lib/pixel-mapper.cc" beforeDir="false" afterPath="$PROJECT_DIR$/rpi-rgb-led-matrix/lib/pixel-mapper.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/lib/pixel-mapper.cc.orig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/lib/pixel-mapper.cc.rej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/new++/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/new++/udp.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/new/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/new/udp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/new/udp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/p1.orig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/p1.rej" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/utils/BWS_3.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/utils/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/rpi-rgb-led-matrix/utils/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/utils/pic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpi-rgb-led-matrix/utils/video-viewer.cc" beforeDir="false" afterPath="$PROJECT_DIR$/rpi-rgb-led-matrix/utils/video-viewer.cc" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1fa0XssQ52qYX9yGmsO9c51WaLG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="92e4a5d0-dd4d-40f1-a99a-2b043a8f5917" name="Default Changelist" comment="" />
+      <created>1596440938908</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596440938908</updated>
+      <workItem from="1596440944055" duration="29000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

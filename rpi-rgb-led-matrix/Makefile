@@ -19,7 +19,6 @@ clean:
 	$(MAKE) -C lib clean
 	$(MAKE) -C utils clean
 	$(MAKE) -C examples-api-use clean
-	$(MAKE) -C new clean
 	$(MAKE) -C $(PYTHON_LIB_DIR) clean
 
 build-csharp:
