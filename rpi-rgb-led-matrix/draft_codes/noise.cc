@@ -12,8 +12,6 @@
 #include <math.h>
 #include <stdio.h>
 #include <signal.h>
-// // #include <chrono>
-// #include <time.h>
 
 using rgb_matrix::GPIO;
 using rgb_matrix::RGBMatrix;
@@ -21,59 +19,31 @@ using rgb_matrix::Canvas;
 
 volatile bool interrupt_received = false;
 
-float scaleMultiply = 5.0;
-float speedMultiply = 30.0;
 int baseR = 255;
 int baseG = 255;
 int baseB = 255;
-int gridX, gridY;
-double k = 0;
-unsigned long timer = 0;
+float scale = 5.0f;
+float speed = 1.0f;
+float k = 0.0f;
 
-FastNoise noise;
 
 static void InterruptHandler(int signo) {
   interrupt_received = true;
 }
 
-// static void DrawOnCanvas(Canvas *canvas) {
-//   /*
-//    * Let's create a simple animation. We use the canvas to draw
-//    * pixels. We wait between each step to have a slower animation.
-//    */
-//   canvas->Fill(0, 0, 0);
-
-//   int center_x = canvas->width() / 2;
-//   int center_y = canvas->height() / 2;
-//   float radius_max = canvas->width() / 2;
-//   float angle_step = 1.0 / 360;
-//   for (float a = 0, r = 0; r < radius_max; a += angle_step, r += angle_step) {
-//     if (interrupt_received)
-//       return;
-//     float dot_x = cos(a * 2 * M_PI) * r;
-//     float dot_y = sin(a * 2 * M_PI) * r;
-//     canvas->SetPixel(center_x + dot_x, center_y + dot_y,
-//                      255, 0, 0);
-//     usleep(1 * 1000);  // wait a little to slow down things.
-//   }
-// }
-
-static void DrawOnCanvas(Canvas *canvas) {
-    // auto now = std::chrono::steady_clock::now();
-    // auto now_ms = std::chrono::time_point_cast<std::chrono::milliseconds>(now);
-    // auto epoch = now_ms.time_since_epoch();
-    // auto value = std::chrono::duration_cast<std::chrono::milliseconds>(epoch);
-    // long duration = value.count();
+static void DrawOnCanvas(Canvas *canvas, FastNoise noise) {
   canvas->Fill(0, 0, 0);
 
-  for(int i=0; i<canvas->width(); i++) {
-    for(int j=0; j<canvas->height(); j++) {
-      if (interrupt_received)
-        return;
-      int col = (int)((noise.GetNoise((float)i,(float)j,(float)(k++))+1.0)/2.0*100.0);
-      canvas->SetPixel(i, j, col, col, col);
-      usleep(1 * 1000);
+  while (!interrupt_received) {
+    for(float i=0.0f; i<canvas->width(); i+=1.0f) {
+      for(float j=0.0f; j<canvas->height(); j+=1.0f) {
+        float col = (noise.GetNoise(i*scale,j*scale,k*speed)+1.0f)/2.0f*100.0f;
+        // int col = (int)((noise.GetNoise(i,j,k)+1.0)/2.0*100.0);
+        canvas->SetPixel(i, j, col, col, col);
+      }
     }
+    k+=1.0f;
+    usleep(15 * 1000);
   }
 }
 
@@ -85,9 +55,11 @@ int main(int argc, char *argv[]) {
   defaults.chain_length = 1;
   defaults.parallel = 1;
   defaults.show_refresh_rate = false;
+  
+  FastNoise noise;
 
-  noise.SetNoiseType(FastNoise::SimplexFractal);
-  noise.SetSeed(1337);
+  noise.SetNoiseType(FastNoise::Simplex);
+  // noise.SetSeed(1337);
 
   Canvas *canvas = rgb_matrix::CreateMatrixFromFlags(&argc, &argv, &defaults);
   if (canvas == NULL)
@@ -100,11 +72,15 @@ int main(int argc, char *argv[]) {
   signal(SIGINT, InterruptHandler);
 
   // DrawOnCanvas(canvas);    // Using the canvas.
-  DrawOnCanvas(canvas);
+  while(!interrupt_received)
+    DrawOnCanvas(canvas, noise);
 
   // Animation finished. Shut down the RGB matrix.
   canvas->Clear();
   delete canvas;
+
+  printf("\%s. Exiting.\n",
+         interrupt_received ? "Received CTRL-C" : "Timeout reached");
 
   return 0;
 }

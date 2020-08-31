@@ -1,7 +1,7 @@
 CFLAGS=-Wall -O3 -g -Wextra -Wno-unused-parameter
 CXXFLAGS=$(CFLAGS)
-OBJECTS=demo-main.o minimal-example.o noise.o
-BINARIES=demo minimal-example noise
+OBJECTS=demo-main.o noise.o
+BINARIES=demo noise 
 
 # Where our library resides. You mostly only need to change the
 # RGB_LIB_DISTRIBUTION, this is where the library is checked out.
@@ -22,6 +22,7 @@ demo : demo-main.o $(RGB_LIBRARY)
 
 # minimal-example : minimal-example.o
 noise : noise.o
+
 # All the binaries that have the same name as the object file.q
 % : %.o $(RGB_LIBRARY)
 	$(CXX) $< -o $@ $(LDFLAGS)

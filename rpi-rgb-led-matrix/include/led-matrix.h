@@ -30,6 +30,7 @@
 #include "canvas.h"
 #include "thread.h"
 #include "pixel-mapper.h"
+#include "FastNoise.h"
 
 namespace rgb_matrix {
 class RGBMatrix;

@@ -29,6 +29,7 @@
 #include "thread.h"
 #include "framebuffer-internal.h"
 #include "multiplex-mappers-internal.h"
+#include "FastNoise.h"
 
 // Leave this in here for a while. Setting things from old defines.
 #if defined(ADAFRUIT_RGBMATRIX_HAT)
