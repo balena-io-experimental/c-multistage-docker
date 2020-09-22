@@ -22,6 +22,7 @@ volatile bool interrupt_received = false;
 int baseR = 255;
 int baseG = 255;
 int baseB = 255;
+float globalBrightness = 50.0f;
 float scale = 5.0f;
 float speed = 1.0f;
 float k = 0.0f;
@@ -37,7 +38,7 @@ static void DrawOnCanvas(Canvas *canvas, FastNoise noise) {
   while (!interrupt_received) {
     for(float i=0.0f; i<canvas->width(); i+=1.0f) {
       for(float j=0.0f; j<canvas->height(); j+=1.0f) {
-        float col = (noise.GetNoise(i*scale,j*scale,k*speed)+1.0f)/2.0f*100.0f;
+        float col = (noise.GetNoise(i*scale,j*scale,k*speed)+1.0f)/2.0f*globalBrightness;
         // int col = (int)((noise.GetNoise(i,j,k)+1.0)/2.0*100.0);
         canvas->SetPixel(i, j, col, col, col);
       }

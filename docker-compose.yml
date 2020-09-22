@@ -1,0 +1,26 @@
+
+version: "2"
+
+volumes:
+    resin-data:
+
+services:
+
+  ble:
+    restart: always
+    privileged: true
+    network_mode: host
+    devices:
+      - "/dev/ttyAMA0:/dev/ttyAMA0"
+      - "/dev/vcio:/dev/vcio"
+    build: ./ble
+    volumes:
+        - 'resin-data:/data'
+        
+  matrix:
+    privileged: true
+    build: ./matrix
+    depends_on:
+      - ble
+    volumes:
+        - 'resin-data:/data'
